@@ -1,0 +1,29 @@
+{
+  "name": "magnet-manager",
+  "version": "0.1.0",
+  "homepage": "https://github.com/Magador/magnet-manager",
+  "authors": [
+    "Jean-Baptiste Lenglet <jbaptiste.lenglet+git@gmail.com>"
+  ],
+  "description": "Web manager for movies and series watched over Torrent network",
+  "main": "index.html",
+  "keywords": [
+    "torrent",
+    "magnet",
+    "manager",
+    "eztv",
+    "yts"
+  ],
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "prefixfree": "LeaVerou/prefixfree#gh-pages"
+  }
+}
