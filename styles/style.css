@@ -44,6 +44,12 @@ a.button-link {
 
 /* Navigation-related classes */
 
+.nav-visible {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
 .nav-container {
     display: flex;
     flex-flow: row nowrap;
@@ -51,8 +57,32 @@ a.button-link {
     align-items: stretch;
     justify-content: space-between;
 
+    overflow: hidden;
     min-height: 2.5rem;
     background-color: #5F5F5F;
+}
+
+.nav-container > .nav-label {
+    display: none;
+    line-height: 2.5rem;
+    padding: 0 0.6875rem 0;
+    cursor: pointer;
+    color: #F55800;
+    text-align: right;
+    transition: color .3s, background-color .3s;
+}
+
+.nav-container > .nav-label:hover {
+    color: #000000;
+    background-color: #F55800;
+}
+
+.nav-visible:not(:checked) + .nav-container > .nav-label > .nav-displayed {
+    display: none;
+}
+
+.nav-visible:checked + .nav-container > .nav-label > .nav-not-displayed {
+    display: none;
 }
 
 .nav-container > .nav-list {
@@ -69,6 +99,7 @@ a.button-link {
 
 .nav-list > .nav-item {
     line-height: 2.5rem;
+    transition: max-height .3s;
 }
 
 .nav-item > .nav-link {
@@ -141,23 +172,25 @@ section {
     opacity: 0;
 }
 
+.article-list > .article-item {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 200px;
+
+    margin-bottom: 10px;
+
+    transition: width .3s;
+}
+
 .article-list > .article-visible:not(:checked) + .article-item {
     width: 33%;
 }
 
 .article-list > .article-visible:checked + .article-item {
     width: 100%;
-}
-
-.article-list > .article-item {
-    position: relative;
-    display: inline-flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-
-    margin-bottom: 10px;
-
-    transition: width .3s;
+    order: -1;
 }
 
 .article-item > .article-label {
@@ -171,7 +204,7 @@ section {
 }
 
 .article-list > .article-visible:checked + .article-item > .article-label {
-    z-index: -1
+    /*z-index: -1*/
 }
 
 .article-list > .article-visible:checked + .article-item,
@@ -188,7 +221,7 @@ section {
 
     flex: 1;
 
-
+    overflow: hidden;
     width: 100%;
     padding: 10px;
 
@@ -293,4 +326,55 @@ section {
 
 .menu > ul > li > a:hover {
     background-color: #c4c4c4;
+}
+
+@media (max-width: 1024px) {
+    main {
+        width: 100%;
+    }
+
+    .aside {
+        display: none;
+    }
+
+    .content {
+        float: none;
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-visible:not(:checked) + .nav-container {
+
+    }
+
+    .nav-container {
+        flex-flow: column nowrap;
+    }
+
+    .nav-container > .nav-label {
+        display: block;
+    }
+
+    .nav-container > .nav-list {
+        flex-flow: column nowrap;
+    }
+
+    .nav-visible:not(:checked) + .nav-container > .nav-list > .nav-item {
+        max-height: 0;
+    }
+
+    .nav-visible:checked + .nav-container > .nav-list > .nav-item {
+        max-height: 2.5rem;
+    }
+
+    .nav-item > .nav-link {
+        display: block;
+        padding: 0 0.6875rem 0;
+        width: 100%;
+    }
+
+    .article-list > .article-item {
+        flex: 1 1 auto;
+    }
 }

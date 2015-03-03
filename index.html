@@ -2,8 +2,9 @@
 <html>
 <head lang="en">
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="styles/style.css" />
+    <link type='text/css' rel="stylesheet" href="styles/style.css" />
     <script type="application/javascript" src="bower_components/prefixfree/prefixfree.min.js"></script>
+    <link type='text/css' rel="stylesheet" href="bower_components/typicons/src/font/typicons.css" data-noprefix/>
     <title>Kerbal Assembly Website</title>
 </head>
 <body>
@@ -11,7 +12,13 @@
         <h1>Kerbal Assembly Website</h1>
     </header>
     <main>
+        <input id="nav-visible" type="checkbox" class="nav-visible" autocomplete="off"/>
         <nav class="nav-container">
+            <label for="nav-visible" class="nav-label">
+                Menu
+                <span class="typcn typcn-arrow-sorted-down nav-not-displayed"></span>
+                <span class="typcn typcn-arrow-sorted-up nav-displayed"></span>
+            </label>
             <ul class="nav-list">
                 <li class="nav-item">
                     <a class="nav-link" href="#">Home</a>
@@ -69,6 +76,34 @@
                 <input id="article3" type="checkbox" name="more" class="article-visible" autocomplete="off" />
                 <div class="article-item">
                     <label for="article3" class="article-label"></label>
+                    <article class="article">
+                        <div class="article-header">
+                            <h4 class="article-title">Aenean rhoncus</h4>
+                            <time class="article-year">2014</time>
+                        </div>
+                        <img class="article-picture" src="http://placehold.it/300x450">
+                        <p class="article-synopsis">
+                            Vivamus lacus libero, venenatis ac venenatis vel, dignissim vitae nunc. Sed eu lobortis arcu. Suspendisse efficitur elementum tortor, et tristique erat rhoncus id. Quisque consequat porttitor convallis. Nullam sem ipsum, sodales nec porta at, commodo id dui. Vestibulum faucibus faucibus tellus, ut convallis nunc. Maecenas sit amet varius elit, vitae sollicitudin ex.
+                        </p>
+                    </article>
+                </div>
+                <input id="article4" type="checkbox" name="more" class="article-visible" autocomplete="off" />
+                <div class="article-item">
+                    <label for="article4" class="article-label"></label>
+                    <article class="article">
+                        <div class="article-header">
+                            <h4 class="article-title">Aenean rhoncus</h4>
+                            <time class="article-year">2014</time>
+                        </div>
+                        <img class="article-picture" src="http://placehold.it/300x450">
+                        <p class="article-synopsis">
+                            Vivamus lacus libero, venenatis ac venenatis vel, dignissim vitae nunc. Sed eu lobortis arcu. Suspendisse efficitur elementum tortor, et tristique erat rhoncus id. Quisque consequat porttitor convallis. Nullam sem ipsum, sodales nec porta at, commodo id dui. Vestibulum faucibus faucibus tellus, ut convallis nunc. Maecenas sit amet varius elit, vitae sollicitudin ex.
+                        </p>
+                    </article>
+                </div>
+                <input id="article5" type="checkbox" name="more" class="article-visible" autocomplete="off" />
+                <div class="article-item">
+                    <label for="article5" class="article-label"></label>
                     <article class="article">
                         <div class="article-header">
                             <h4 class="article-title">Aenean rhoncus</h4>

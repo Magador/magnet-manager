@@ -24,6 +24,7 @@
     "tests"
   ],
   "dependencies": {
-    "prefixfree": "LeaVerou/prefixfree#gh-pages"
+    "prefixfree": "LeaVerou/prefixfree#gh-pages",
+    "typicons": "~2.0.7"
   }
 }
