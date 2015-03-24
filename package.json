@@ -1,0 +1,29 @@
+{
+  "name": "magnet-manager",
+  "version": "1.0.0",
+  "description": "Web manager for movies and series watched over Torrent network.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Magador/magnet-manager.git"
+  },
+  "keywords": [
+    "torrent",
+    "magnet",
+    "manager",
+    "eztv",
+    "yts"
+  ],
+  "author": "Jean-Baptiste Lenglet <jbaptiste.lenglet+git@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Magador/magnet-manager/issues"
+  },
+  "homepage": "https://github.com/Magador/magnet-manager",
+  "dependencies": {
+    "express": "^4.12.3"
+  }
+}
