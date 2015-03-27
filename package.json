@@ -4,7 +4,8 @@
   "description": "Web manager for movies and series watched over Torrent network.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "mongod --dbpath=./db --port 27017 && node index"
   },
   "repository": {
     "type": "git",
@@ -24,6 +25,7 @@
   },
   "homepage": "https://github.com/Magador/magnet-manager",
   "dependencies": {
-    "express": "^4.12.3"
+    "express": "^4.12.3",
+    "mongoose": "^4.0.0"
   }
 }
