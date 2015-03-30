@@ -1,8 +1,8 @@
 /**
- * Created by Magador on 27/03/2015.
+ * Created by Magador on 29/03/2015.
  */
 
-var Profile = require("../models/Profile");
+var Profile = require("../models/Bookmark");
 
 module.exports = {
     construct: function(req, res) {
