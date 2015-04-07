@@ -253,7 +253,8 @@ section {
     height: 100%;
 }
 
-.-moz- .article > .article-picture {
+.-moz- .article > .article-picture,
+.-o- .article > .article-picture {
     height: auto;
     max-height: 450px;
 }

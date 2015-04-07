@@ -3,5 +3,6 @@
  */
 
 module.exports = {
-    port: 8001
+    port: 8001,
+    mongodb: 'localhost:27017'
 };

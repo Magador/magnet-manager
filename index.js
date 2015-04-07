@@ -11,4 +11,9 @@ require('./setup.js')(config, app);
 // routes
 require('./routes.js')(app);
 
-app.listen(config.port);
+app.listen(config.port, function(err) {
+    if(err) {
+        return console.error(err);
+    }
+    console.info("Server started listening on port "+ config.port);
+});
