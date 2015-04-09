@@ -9,5 +9,5 @@ fs.readdirSync(__dirname)
         return (file.indexOf('.') !== 0) && (file !== 'load.js')
     })
     .forEach(function(file) {
-        module.exports[file.replace(/\.js$/, '')] = require('./' + file);
-    });
+        module.exports[file.replace(/\.js$/, '')] = require('./' + file)
+    })

@@ -3,9 +3,10 @@
  */
 
 var mongoose = require('mongoose'),
-    serveStatic = require('serve-static'),
+    path = require('path'),
     session = require('express-session'),
     MongoStore = require('connect-mongo')(session),
+    bodyParser = require('body-parser'),
     config = require('./config');
 
 mongoose.connect('mongodb://'+ config.mongodb +'/magnet-manager', {
@@ -18,14 +19,21 @@ mongoose.connect('mongodb://'+ config.mongodb +'/magnet-manager', {
 
 module.exports = function(config, app) {
     app.set('x-powered-by', false);
+    app.set('etag', 'strong');
 
-    app.use(serveStatic('static'/*, {maxAge: '1d'}*/));
+    app.set('views', path.join(__dirname, 'views'));
+    app.set('view engine', 'jade');
+
+    app.use(express.static(path.join(__dirname, 'static'), {maxAge: '1d'}));
 
     app.use(session({
         secret: 'magnet-manager',
-        saveUninitialized: true,
+        saveUninitialized: false,
         store: new MongoStore({mongooseConnection: mongoose.connection}),
         name: "mmid",
         resave: false
     }));
+
+    app.use(bodyParser.json());
+    app.use(bodyParser.urlencoded({extended: true}));
 };
