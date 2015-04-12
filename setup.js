@@ -8,8 +8,9 @@ var mongoose = require('mongoose'),
     MongoStore = require('connect-mongo')(session),
     bodyParser = require('body-parser'),
     config = require('./config');
+    config.mongodb.auth = require('./auth').auth;
 
-mongoose.connect('mongodb://'+ config.mongodb +'/magnet-manager', {
+mongoose.connect(require('url').format(config.mongodb), {
     server: {
         socketOptions: {
             keepAlive: true

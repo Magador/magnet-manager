@@ -10,4 +10,4 @@ fs.readdirSync(__dirname)
     })
     .forEach(function(file) {
         module.exports[file.replace(/\.js$/, '')] = require('./' + file)
-    })
+    });
