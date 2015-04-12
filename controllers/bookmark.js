@@ -2,7 +2,7 @@
  * Created by Magador on 29/03/2015.
  */
 
-var Profile = require("../models/Bookmark");
+var Bookmark = require("../models/Bookmark");
 
 module.exports = {
     construct: function(req, res) {

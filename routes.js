@@ -8,11 +8,12 @@ var controllers = require('./controllers/load'),
 module.exports = function (app) {
     app.use(function (req, res, next) {
         console.log("request arrived", req.headers.host+req.url);
-        res.send("OK");
-        //next();
+        //res.send("OK");
+        next();
     });
 
     app.get('/', controllers.index.getIndex);
+    app.get('/login', bodyParser, controllers.login.get);
 
     //app.get('/search/:search', controllers.search.getSearch);
 

@@ -8,14 +8,16 @@ var mongoose = require('mongoose'),
     MongoStore = require('connect-mongo')(session),
     bodyParser = require('body-parser'),
     config = require('./config');
-    config.mongodb.auth = require('./auth').auth;
+    mongooseAuth = require('./auth');
 
 mongoose.connect(require('url').format(config.mongodb), {
     server: {
         socketOptions: {
             keepAlive: true
         }
-    }
+    },
+    user: mongooseAuth.user,
+    pass: mongooseAuth.pass
 });
 
 module.exports = function(config, app) {
@@ -25,7 +27,7 @@ module.exports = function(config, app) {
     app.set('views', path.join(__dirname, 'views'));
     app.set('view engine', 'jade');
 
-    app.use(express.static(path.join(__dirname, 'static'), {maxAge: '1d'}));
+    app.use(require('express').static(path.join(__dirname, 'static'), {maxAge: '1d'}));
 
     app.use(session({
         secret: 'magnet-manager',
