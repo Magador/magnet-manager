@@ -21,6 +21,9 @@ module.exports = function (app) {
     //app.get('/movie/:id', controllers.media.getMovieById);
     //app.get('/media/:id', controllers.media.getMEdiaById);
 
+    app.get('/recent', controllers.media.getRecent);
+    app.get('/top', controllers.media.getTop);
+
     app.post('/signin', bodyParser, controllers.login.signIn);
     app.post('/signout', controllers.login.signOut);
     app.post('/signup', bodyParser, controllers.login.signUp);

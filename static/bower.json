@@ -25,6 +25,7 @@
   ],
   "dependencies": {
     "prefixfree": "LeaVerou/prefixfree#gh-pages",
-    "typicons": "~2.0.7"
+    "typicons": "~2.0.7",
+    "microajax": "~0.3.0"
   }
 }
