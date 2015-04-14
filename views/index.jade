@@ -1,0 +1,104 @@
+//
+    Created by jerominejournet on 07-04-15.
+
+doctype html
+html
+    head(lang='en')
+        meta(charset='UTF-8')
+        link(type='text/css', rel='stylesheet', href='styles/style.css')
+        script(type='application/javascript', src='bower_components/prefixfree/prefixfree.min.js')
+        link(type='text/css', rel='stylesheet', href='bower_components/typicons/src/font/typicons.css', data-noprefix)
+        title Magnet manager
+    body
+        header
+            h1 Magnet manager
+        main
+            input#nav-visible.nav-visible(type='checkbox', autocomplete='off')
+            nav.nav-container
+                label.nav-label(for='nav-visible') Menu
+                    span.typcn.typcn-arrow-sorted-down.nav-not-displayed
+                    span.typcn.typcn-arrow-sorted-up.nav-displayed
+                ul.nav-list
+                    li.nav-item
+                        a.nav-link(href='#') Home
+                    li.nav-item
+                        aa.nav-link(href='#') Recent
+                    li.nav-item
+                        aa.nav-link(href='#') Top Trends
+                    li.nav-item
+                        aa.nav-link(href='#') Categories
+                ul.nav-list
+                    li.nav-item
+                        aa.nav-link(href='#') Sign in
+                    li.nav-item
+                        aa.nav-link.nav-link-mod(href='#') Sign up
+            section.content
+                h2.content-title Most recent
+                .article-list
+                    input#article1.article-visible(type='checkbox', name='more', autocomplete='off')
+                .article-item
+                    label.article-label(for='article1')
+                    article.article
+                        .article-header
+                            h4.article-title Aenean rhoncus kjqzd khqzd kjqzhd kjqzhd
+                            time.article-year 2014
+                        img.article-picture(src='http://placehold.it/300x450')
+                        p.article-synopsis.
+                            Vivamus lacus libero, venenatis ac venenatis vel, dignissim vitae nunc. Sed eu lobortis arcu. Suspendisse efficitur elementum tortor, et tristique erat rhoncus id. Quisque consequat porttitor convallis. Nullam sem ipsum, sodales nec porta at, commodo id dui. Vestibulum faucibus faucibus tellus, ut convallis nunc. Maecenas sit amet varius elit, vitae sollicitudin ex.
+                    input#article2.article-visible(type='checkbox', name='more', autocomplete='off')
+                    .article-item
+                        label.article-label(for='article2')
+                        article.article
+                            .article-header
+                                h4.article-title Aenean rhoncus
+                                time.time 2014
+                            img.article-picture(src='http://placehold.it/300x450')
+                            p.article-synopsis.
+                                Vivamus lacus libero, venenatis ac venenatis vel, dignissim vitae nunc. Sed eu lobortis arcu. Suspendisse efficitur elementum tortor, et tristique erat rhoncus id. Quisque consequat porttitor convallis. Nullam sem ipsum, sodales nec porta at, commodo id dui. Vestibulum faucibus faucibus tellus, ut convallis nunc. Maecenas sit amet varius elit, vitae sollicitudin ex.
+                    input#article3.article-visible(type='checkbox', name='more', autocomplete='off')
+                    .article-item
+                        label.article-label(for='article3')
+                        article.article
+                            .article-header
+                                h4.article-title Aenean rhoncus
+                                time.article-year 2014
+                            img.article-picture(src='http://placehold.it/300x450')
+                            p.article-synopsis.
+                                Vivamus lacus libero, venenatis ac venenatis vel, dignissim vitae nunc. Sed eu lobortis arcu. Suspendisse efficitur elementum tortor, et tristique erat rhoncus id. Quisque consequat porttitor convallis. Nullam sem ipsum, sodales nec porta at, commodo id dui. Vestibulum faucibus faucibus tellus, ut convallis nunc. Maecenas sit amet varius elit, vitae sollicitudin ex.
+                    input#article4.article-visible(type='checkbox', name='more', autocomplete='off')
+                    .article-item
+                        label.article-label(for='article4')
+                        article.article
+                            .article-header
+                                h4.article-title Aenean rhoncus
+                                time.article-year 2014
+                            img.article-picture(src='http://placehold.it/300x450')
+                            p.article-synopsis.
+                                Vivamus lacus libero, venenatis ac venenatis vel, dignissim vitae nunc. Sed eu lobortis arcu. Suspendisse efficitur elementum tortor, et tristique erat rhoncus id. Quisque consequat porttitor convallis. Nullam sem ipsum, sodales nec porta at, commodo id dui. Vestibulum faucibus faucibus tellus, ut convallis nunc. Maecenas sit amet varius elit, vitae sollicitudin ex.
+                    input#article5.article-visible(type='checkbox', name='more', autocomplete='off')
+                    .article-item
+                        label.article-label(for='article5')
+                        article.article
+                            .article-header
+                                h4.article-title Aenean rhoncus
+                                time.article-year 2014
+                            img.article-picture(src='http://placehold.it/300x450')
+                            p.article-synopsis.
+                                Vivamus lacus libero, venenatis ac venenatis vel, dignissim vitae nunc. Sed eu lobortis arcu. Suspendisse efficitur elementum tortor, et tristique erat rhoncus id. Quisque consequat porttitor convallis. Nullam sem ipsum, sodales nec porta at, commodo id dui. Vestibulum faucibus faucibus tellus, ut convallis nunc. Maecenas sit amet varius elit, vitae sollicitudin ex.
+            section.aside
+                article.menu
+                    h4.menu-title Popular
+                    ul
+                        li
+                            a.button.button-link(href='#') Cum equiso messis
+                            a.button.button-link(href='#') Cur zirbus studere
+                            a.button.button-link(href='#') Cum tabes crescere
+                            a.button.button-link(href='#') Messis interdum
+                article.menu
+                    h4.menu-title Categories
+                    ul
+                        li
+                            a.button.button-link(href='#') Lorem Ipsum
+                            a.button.button-link(href='#') Dolor sit amet
+                            a.button.button-link(href='#') Consectetur adipiscing
+                            a.button.button-link(href='#') Nullam nisi
