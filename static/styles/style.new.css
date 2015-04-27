@@ -1,0 +1,307 @@
+/**
+    New CSS styles
+*/
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 16px;
+}
+
+.body {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: flex-start;
+    align-items: center;
+
+    margin: auto;
+
+    max-width: 1000px;
+    width: 100%;
+}
+
+/* Header styles */
+.body > .header {
+
+}
+
+.header > .header-title {
+    font-family: "Gill Sans MT", sans-serif;
+    color: #FF5722;
+}
+/* End of header styles */
+
+/* Nav styles */
+.body > .nav-visible {
+    display: none;
+}
+
+.body > .nav {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    align-items: stretch;
+    justify-content: space-between;
+
+    width: 100%;
+    min-height: 2.5rem;
+    overflow: hidden;
+    background-color: #E64A19;
+}
+
+.nav > .nav-label {
+    display: none;
+}
+
+.nav-label > .nav-dropdown-icon {
+
+}
+
+.nav > .nav-list {
+    display: flex;
+    flex-flow: row nowrap;
+    align-content: center;
+    align-items: stretch;
+    justify-content: flex-start;
+
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav-list > .nav-item {
+    line-height: 2.5rem;
+}
+
+.nav-item > .nav-link {
+    padding: 0.6875rem 0.75rem 0.75rem;
+
+    text-decoration: none;
+    color: #FFFFFF;
+}
+
+.nav-item > .nav-link.link-secondary {
+    background-color: #2979FF;
+}
+
+.nav-item > .nav-link.link-secondary:hover {
+    background-color: #448AFF;
+}
+
+.nav-item > .nav-link.link-secondary:active {
+    background-color: #82B1FF;
+}
+
+.nav-item > .nav-link:hover {
+    background-color: #FF5722;
+}
+
+.nav-item > .nav-link:active {
+    background-color: #FF5722;
+    color: #000000;
+}
+
+/* End of nav styles */
+
+/* Main styles */
+.body > .main {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: flex-start;
+
+}
+
+.main > .content {
+    width: 70%;
+}
+
+.content > .content-title {
+    margin-bottom: 10px;
+}
+
+.article-list {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: flex-start;
+
+    list-style-type: none;
+
+    margin: 0 -10px;
+    padding-left: 0;
+}
+
+.article-list > .article-visible {
+    display: none;
+    visibility: hidden;
+    opacity: 0;
+}
+
+.article-list > .article-item {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    min-width: 180px;
+
+    margin-bottom: 10px;
+
+    transition: width .3s;
+}
+
+.article-list > .article-visible:not(:checked) + .article-item {
+    width: 25%;
+}
+
+.article-list > .article-visible:checked + .article-item {
+    width: 100%;
+    order: -1;
+}
+
+.article-item > .article-label {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    transition: box-shadow .3s;
+}
+
+.article-list > .article-visible:checked + .article-item > .article-label {
+    /*z-index: -1*/
+}
+
+.article-item > .article-label:hover {
+    box-shadow: 0 0 3px 2px #5F5F5F;
+}
+
+.article-item > .article {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-between;
+
+    flex: 1;
+
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+
+    transition: background-color .3s;
+}
+
+.article > .article-header {
+    width: 100%;
+    margin-bottom: 5px;
+}
+
+.article-header > .article-title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    margin: 0;
+}
+
+.article-header > .article-year {
+    color: #F55800;
+    text-shadow: 1px 1px 1px #CF4B00;
+}
+
+.article > .article-picture {
+    max-width: 300px;
+
+    transition: width .3s;
+}
+
+.-webkit- .article > .article-picture {
+    height: 100%;
+}
+
+.-moz- .article > .article-picture,
+.-o- .article > .article-picture {
+    height: auto;
+    max-height: 450px;
+}
+
+.article-visible:checked + .article-item > .article > .article-picture {
+    width: 50%;
+}
+
+.article-visible:not(:checked) + .article-item > .article > .article-picture {
+    width: 100%;
+}
+
+.article > .article-synopsis {
+    text-align: justify;
+    transition: opacity .3s .3s, max-height .3s .3s;
+}
+
+.article-visible:not(:checked) + .article-item > .article > .article-synopsis {
+    visibility: collapse;
+    width: 0;
+    opacity: 0;
+    max-height: 0;
+    transition: max-height;
+}
+
+.article-visible:checked + .article-item > .article > .article-synopsis {
+    visibility: visible;
+    width: 50%;
+    opacity: 1;
+    max-height: 100%;
+}
+
+/* End of main styles */
+
+/* Aside styles */
+.main > .aside {
+    width: 30%;
+}
+
+/* Color palette from @link http://www.google.com/design/spec/style/color.html#color-color-palette */
+
+/* Deep orange 500 */
+.primary {
+    color: #FF5722;
+}
+
+/* Pale Deep orange 100 */
+.primary-pale {
+    color: #FFCCBC;
+}
+
+/* Dark Deep orange 700 */
+.primary-dark {
+    color: #E64A19;
+}
+
+/* Blue A200 */
+.secondary {
+    color: #448AFF;
+}
+
+/* Pale Blue A100 */
+.secondary-pale {
+    color: #82B1FF;
+}
+
+/* Dark Blue A400 */
+.secondary-dark {
+    color: #2979FF;
+}
+
+/* Grey 900 */
+.background-dark {
+    background-color: #212121;
+}
+
+/* Font */
+.font {
+    font-family: "Gill Sans MT", sans-serif;
+}
