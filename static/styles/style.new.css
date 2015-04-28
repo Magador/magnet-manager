@@ -173,7 +173,7 @@ html {
 }
 
 .article-list > .article-visible:checked + .article-item > .article-label {
-    /*z-index: -1*/
+    z-index: -1
 }
 
 .article-item > .article-label:hover {
@@ -251,10 +251,15 @@ html {
 }
 
 .article-visible:checked + .article-item > .article > .article-synopsis {
+    margin-top: 0;
     visibility: visible;
     width: 50%;
     opacity: 1;
     max-height: 100%;
+}
+
+.article-visible:checked + .article-item > .article > .article-synopsis::first-letter {
+    margin-left: 2rem;
 }
 
 /* End of main styles */
