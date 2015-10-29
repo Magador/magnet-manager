@@ -47,8 +47,8 @@ module.exports = {
             });
     },
     signOut: function(req, res) {
-                res.setHeader('Content-Type', 'application/json');
-                res.end(JSON.stringify({connected: false, data: require('mongoose').Types.ObjectId()}));
+        res.setHeader('Content-Type', 'application/json');
+        res.end(JSON.stringify({connected: false, data: require('mongoose').Types.ObjectId()}));
     },
     signUp: function(req, res) {
         if(req.session._id) {

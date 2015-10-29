@@ -7,7 +7,7 @@ var app = require('express')();
 
 var config = require('./config.js');
 // setup
-require('./setup.js')(config, app);
+require('./setup.js')(app);
 // routes
 require('./routes.js')(app);
 

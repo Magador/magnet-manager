@@ -7,7 +7,8 @@ var controllers = require('./controllers/load'),
 
 module.exports = function (app) {
     app.use(function (req, res, next) {
-        console.log("request arrived", req.headers.host+req.url);
+        console.log("request arrived", req.headers.host);
+        console.log("from:", req.socket.remoteAddress, req.socket., "to", req.socket.localAddress);
         //res.send("OK");
         next();
     });
@@ -25,7 +26,7 @@ module.exports = function (app) {
     app.get('/top', controllers.media.getTop);
 
     app.post('/signin', bodyParser, controllers.login.signIn);
-    app.post('/signout', controllers.login.signOut);
+    app.get('/signout', controllers.login.signOut);
     app.post('/signup', bodyParser, controllers.login.signUp);
 
 };

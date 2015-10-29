@@ -20,7 +20,7 @@ mongoose.connect(require('url').format(config.mongodb), {
     pass: mongooseAuth.pass
 });
 
-module.exports = function(config, app) {
+module.exports = function(app) {
     app.set('x-powered-by', false);
     app.set('etag', 'strong');
 
@@ -30,7 +30,7 @@ module.exports = function(config, app) {
     app.use(require('express').static(path.join(__dirname, 'static'), {maxAge: '1d'}));
 
     app.use(session({
-        secret: 'magnet-manager',
+        secret: config.salt,
         saveUninitialized: false,
         store: new MongoStore({mongooseConnection: mongoose.connection}),
         name: "mmid",
